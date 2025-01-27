@@ -2,6 +2,9 @@
 
 This is a Next.js application that generates professional email templates based on user inputs. It uses Google's Gemini model via LangChain to generate the emails. The application includes a form where users can input the recipient's name, email purpose, and key points, and it displays the generated email on the same page.
 
+## Live Link
+[Website](https://email-generator-assignment.vercel.app/)
+
 ---
 
 ## [Demo Video Link](https://youtu.be/1XGaoMQNJ8U)
