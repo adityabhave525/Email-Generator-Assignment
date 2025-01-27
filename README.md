@@ -4,6 +4,10 @@ This is a Next.js application that generates professional email templates based 
 
 ---
 
+## [Demo Video Link](https://youtu.be/1XGaoMQNJ8U)
+
+https://youtu.be/1XGaoMQNJ8U
+
 ## Features
 - **User-Friendly Form**: Collects the recipient's name, email purpose (dropdown with options like "Meeting Request", "Follow Up", "Thank You"), and key points.
 - **AI-Powered Email Generation**: Uses Google's Gemini model via LangChain to generate professional emails.
