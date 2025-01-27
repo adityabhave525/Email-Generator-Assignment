@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Professional Email Generator
 
-## Getting Started
+This is a Next.js application that generates professional email templates based on user inputs. It uses Google's Gemini model via LangChain to generate the emails. The application includes a form where users can input the recipient's name, email purpose, and key points, and it displays the generated email on the same page.
 
-First, run the development server:
+---
 
+## Features
+- **User-Friendly Form**: Collects the recipient's name, email purpose (dropdown with options like "Meeting Request", "Follow Up", "Thank You"), and key points.
+- **AI-Powered Email Generation**: Uses Google's Gemini model via LangChain to generate professional emails.
+- **Real-Time Display**: Displays the generated email on the same page after submission.
+- **Loading State**: Shows a spinner while the email is being generated to improve user experience.
+
+---
+
+## Technologies Used
+- **Next.js**: A React framework for building server-rendered applications.
+- **LangChain**: A framework for building applications powered by language models.
+- **Google's Gemini**: A state-of-the-art generative AI model for text generation.
+- **Tailwind CSS**: A utility-first CSS framework for styling the application.
+
+---
+
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- **Node.js** (v16 or higher)
+- **npm** (Node Package Manager)
+- **Google API Key**: You need a Google API key to use the Gemini model. You can get one from the [Google AI Studio.](https://aistudio.google.com/app/apikey)
+
+---
+
+## Setup Instructions
+
+### 1. Clone the Repository
+Clone the repository to your local machine:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/professional-email-generator.git
+cd professional-email-generator
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2.Install Dependencies
+Install the required dependencies using npm:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Set Up Environment Variables
+Create a `.env.local` file in the root directory of your project and add your Google API key:
+```
+GOOGLE_API_KEY=your_google_api_key_here
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run the Application
+Start the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+The application will be available at http://localhost:3000.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+- `app/page.tsx`: The main page of the application. It contains the form and logic for generating the email.
+- `app/api/generate-email/route.ts`: The API route that handles the form submission and generates the email using LangChain and Google's Gemini model.
+- `package.json`: Lists the project dependencies and scripts.
